@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mahathir Mohammad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #FAF8F4;
+    --warm-white: #FFFFFF;
+    --ink: #1C1A17;
+    --ink-muted: #5A5650;
+    --ink-faint: #9A958E;
+    --accent: #8B6F4E;
+    --accent-light: #E8DDD1;
+    --accent-lighter: #F3EDE6;
+    --border: rgba(28,26,23,0.1);
+    --border-soft: rgba(28,26,23,0.06);
+    --teal-soft: #E2EFEA;
+    --teal-text: #2D6B55;
+    --amber-soft: #F2E9D8;
+    --amber-text: #7A5520;
+    --purple-soft: #EAE8F5;
+    --purple-text: #4A3FA0;
+    --coral-soft: #F5E8E2;
+    --coral-text: #8B3A22;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(250,248,244,0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-soft);
+    padding: 0 2rem;
+  }
+  .nav-inner {
+    max-width: 780px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+  }
+  .nav-name {
+    font-family: 'Lora', serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+  .nav-links a {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--ink-muted);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--ink); }
+
+  /* MAIN LAYOUT */
+  main { max-width: 780px; margin: 0 auto; padding: 0 2rem 6rem; }
+
+  /* HERO */
+  .hero {
+    padding: 5rem 0 4rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+    align-items: start;
+  }
+  .hero-eyebrow {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+  .hero h1 {
+    font-family: 'Lora', serif;
+    font-size: clamp(36px, 5vw, 52px);
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+  }
+  .hero-bio {
+    font-size: 15px;
+    color: var(--ink-muted);
+    line-height: 1.75;
+    max-width: 520px;
+    margin-bottom: 2rem;
+  }
+  .hero-links { display: flex; gap: 10px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 13px;
+    font-weight: 400;
+    padding: 8px 16px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+  }
+  .btn-outline {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--ink-muted);
+  }
+  .btn-outline:hover {
+    background: var(--accent-lighter);
+    border-color: var(--accent-light);
+    color: var(--ink);
+  }
+  .btn-filled {
+    background: var(--ink);
+    color: var(--cream);
+    border: 1px solid var(--ink);
+  }
+  .btn-filled:hover { background: #333; }
+
+  /* AVATAR */
+  .avatar-wrap { padding-top: 0.5rem; }
+  .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--accent-light);
+    border: 3px solid var(--warm-white);
+    box-shadow: 0 0 0 1px var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lora', serif;
+    font-size: 24px;
+    color: var(--accent);
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* SECTION */
+  section { padding: 3.5rem 0; border-top: 1px solid var(--border-soft); }
+  .section-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 2rem;
+  }
+
+  /* CARDS */
+  .card {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.75rem 2rem;
+    margin-bottom: 1rem;
+    transition: border-color 0.2s;
+  }
+  .card:hover { border-color: rgba(28,26,23,0.2); }
+  .card-header { margin-bottom: 1rem; }
+  .card-title {
+    font-family: 'Lora', serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 0.25rem;
+  }
+  .card-meta { font-size: 13px; color: var(--ink-faint); }
+  .card-body { font-size: 14px; color: var(--ink-muted); line-height: 1.75; }
+  .card-body p + p { margin-top: 0.75rem; }
+  .tags { margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag {
+    font-size: 12px;
+    padding: 3px 11px;
+    border-radius: 999px;
+    font-weight: 400;
+  }
+  .tag-teal { background: var(--teal-soft); color: var(--teal-text); }
+  .tag-amber { background: var(--amber-soft); color: var(--amber-text); }
+  .tag-purple { background: var(--purple-soft); color: var(--purple-text); }
+  .tag-coral { background: var(--coral-soft); color: var(--coral-text); }
+
+  /* RANK BADGES */
+  .rank-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 0.75rem; }
+  .rank-badge {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: var(--accent-lighter);
+    color: var(--accent);
+    border: 1px solid var(--accent-light);
+  }
+
+  /* HOBBY GRID */
+  .hobby-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .hobby-cell {
+    background: var(--warm-white);
+    padding: 1.5rem 1.75rem;
+    transition: background 0.2s;
+  }
+  .hobby-cell:hover { background: var(--accent-lighter); }
+  .hobby-icon {
+    font-size: 22px;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+  .hobby-name {
+    font-family: 'Lora', serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 0.4rem;
+  }
+  .hobby-desc { font-size: 13px; color: var(--ink-muted); line-height: 1.65; }
+
+  /* CONTACT */
+  .contact-block { max-width: 520px; }
+  .contact-block p { font-size: 15px; color: var(--ink-muted); line-height: 1.75; margin-bottom: 1.5rem; }
+  .contact-links { display: flex; flex-wrap: wrap; gap: 10px; }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border-soft);
+    padding: 2rem;
+    text-align: center;
+    font-size: 12px;
+    color: var(--ink-faint);
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero { animation: fadeUp 0.6s ease both; }
+  section { animation: fadeUp 0.5s ease both; }
+  section:nth-of-type(2) { animation-delay: 0.05s; }
+  section:nth-of-type(3) { animation-delay: 0.10s; }
+  section:nth-of-type(4) { animation-delay: 0.15s; }
+  section:nth-of-type(5) { animation-delay: 0.20s; }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    main { padding: 0 1.25rem 4rem; }
+    .hero { grid-template-columns: 1fr; gap: 1.5rem; padding: 3rem 0 2.5rem; }
+    .avatar-wrap { order: -1; }
+    .avatar { width: 72px; height: 72px; font-size: 18px; }
+    .hero h1 { font-size: 32px; }
+    nav { padding: 0 1.25rem; }
+    .nav-links { gap: 1.1rem; }
+    .hobby-grid { grid-template-columns: 1fr 1fr; }
+    .card { padding: 1.25rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav aria-label="Site navigation">
+  <div class="nav-inner">
+    <a class="nav-name" href="#">Mahathir Mohammad</a>
+    <ul class="nav-links">
+      <li><a href="#research">Research</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#beyond">Beyond work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+  <div class="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Aeronautical Engineering · MIST, Bangladesh</p>
+      <h1>Mahathir<br>Mohammad</h1>
+      <p class="hero-bio">
+        I build numerical solvers for coupled physics problems — currently working on thermo-mechanical response of anisotropic metal matrix composite panels. My interest is in how coupled PDEs are derived from first principles, discretised, and solved accurately. Applying for fully funded PhD positions in computational mechanics, Fall 2027.
+      </p>
+      <div class="hero-links">
+        <a class="btn btn-filled" href="mailto:mdmahathir021@gmail.com">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          Get in touch
+        </a>
+        <a class="btn btn-outline" href="https://www.instagram.com/pencilhead021" target="_blank" rel="noopener">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+          Sketch page
+        </a>
+        <a class="btn btn-outline" href="https://www.linkedin.com/in/mdmahathir021/" target="_blank" rel="noopener">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a class="btn btn-outline" href="#" target="_blank" rel="noopener">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>
+          CV
+        </a>
+      </div>
+    </div>
+    <div class="avatar-wrap">
+      <div class="avatar" id="avatarEl">MM</div>
+    </div>
+  </div>
+
+  <!-- RESEARCH -->
+  <section id="research">
+    <p class="section-label">Research</p>
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Thermo-mechanical analysis of anisotropic MMC panels</div>
+        <div class="card-meta">Undergraduate thesis &middot; MIST &middot; 2025&ndash;2026</div>
+      </div>
+      <div class="card-body">
+        <p>Metal matrix composites carry heat and load differently along different directions — and both effects couple together in ways that matter for aerospace structures. My thesis builds a coupled solver for this from scratch: I derived the governing PDE system (anisotropic Fourier conduction, plane-stress equilibrium, CTE mismatch coupling), encoded the full conductivity and elasticity tensors with coordinate transformations for arbitrary fiber orientations, and implemented a 2nd-order finite difference scheme in MATLAB.</p>
+        <p>The solver is currently in final validation — cross-checking against analytical benchmarks, a grid refinement study, and ANSYS Mechanical. A journal paper is planned once results are confirmed. Target journals: <em>Composite Structures</em>, <em>Computers &amp; Structures</em>, <em>International Journal of Solids and Structures</em>.</p>
+      </div>
+      <div class="tags">
+        <span class="tag tag-teal">Computational solid mechanics</span>
+        <span class="tag tag-teal">Finite difference methods</span>
+        <span class="tag tag-teal">Anisotropic composites</span>
+        <span class="tag tag-teal">Thermo-elastic coupling</span>
+        <span class="tag tag-amber">MATLAB</span>
+        <span class="tag tag-amber">ANSYS Mechanical</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <p class="section-label">Projects</p>
+    <div class="card">
+      <div class="card-header">
+        <div class="rank-row">
+          <span class="rank-badge">17th globally &mdash; technical report</span>
+          <span class="rank-badge">18th globally &mdash; proposal</span>
+        </div>
+        <div class="card-title">AIAA Design/Build/Fly 2025&ndash;26</div>
+        <div class="card-meta">Design Subteam Lead &middot; TEAM MIST &middot; Wichita, Kansas, USA</div>
+      </div>
+      <div class="card-body">
+        <p>Led the design subteam for MIST's entry in the world's largest collegiate RC aircraft competition. My work covered aerodynamic analysis in XFLR5, parametric wing and tail sizing, and aerostructural trade studies balancing performance against structural weight and stiffness constraints.</p>
+        <p>I also built a MATLAB parametric sizing script that automatically propagates any design change through all dependent parameters — no manual recalculation. This turned out to be the most useful thing I built for the team.</p>
+        <p>The 17th and 18th global ranks in the technical report and proposal came from writing I led as primary author. Final competition rank: 58th overall out of teams worldwide.</p>
+      </div>
+      <div class="tags">
+        <span class="tag tag-purple">XFLR5</span>
+        <span class="tag tag-amber">MATLAB</span>
+        <span class="tag tag-coral">Conceptual aircraft design</span>
+        <span class="tag tag-coral">Technical writing</span>
+        <span class="tag tag-coral">Aerostructural trade studies</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEYOND -->
+  <section id="beyond">
+    <p class="section-label">Beyond work</p>
+    <div class="hobby-grid">
+      <div class="hobby-cell">
+        <span class="hobby-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+        </span>
+        <div class="hobby-name">Pencil sketching</div>
+        <div class="hobby-desc">Portraits and still objects — I'm drawn to scenes with difficult shadow conditions. No formal training, just a 2B pencil, paper, and a lot of erasing. I post them on my <a href="https://www.instagram.com/pencilhead021" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none;">art page</a>.</div>
+      </div>
+      <div class="hobby-cell">
+        <span class="hobby-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h.01M15 9h.01M9 15h.01M15 15h.01M12 12h.01"/></svg>
+        </span>
+        <div class="hobby-name">Sudoku</div>
+        <div class="hobby-desc">Can solve hard-difficulty grids in under 8 minutes. It's meditative in a way that is difficult to explain to people who haven't tried it.</div>
+      </div>
+      <div class="hobby-cell">
+        <span class="hobby-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+        </span>
+        <div class="hobby-name">Rubik's cube</div>
+        <div class="hobby-desc">Solved a 3×3 under 30 seconds in 8th grade. Then it broke, I never replaced it, and I forgot everything. Currently relearning on a 2×2. Status: humbling.</div>
+      </div>
+      <div class="hobby-cell">
+        <span class="hobby-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        </span>
+        <div class="hobby-name">Singing & stage</div>
+        <div class="hobby-desc">My voice is tolerable — easy songs, limited range, no formal complaints. Performed on stage at university twice and at informal events several more times.</div>
+      </div>
+      <div class="hobby-cell">
+        <span class="hobby-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </span>
+        <div class="hobby-name">Anime</div>
+        <div class="hobby-desc">A reliable way to stop thinking about boundary conditions for a few hours.</div>
+      </div>
+      <div class="hobby-cell">
+        <span class="hobby-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </span>
+        <div class="hobby-name">Learning random things</div>
+        <div class="hobby-desc">No particular system. If something catches my attention, I'll spend a weekend going deep on it. Topics vary wildly.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <p class="section-label">Contact</p>
+    <div class="contact-block">
+      <p>I'm actively looking for fully funded PhD positions in computational mechanics and related areas for Fall 2027. If you work on numerical methods for solid mechanics, composite structures, or coupled multiphysics problems, I'd be glad to hear from you.</p>
+      <div class="contact-links">
+        <a class="btn btn-filled" href="mailto:mdmahathir021@gmail.com">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          mdmahathir021@gmail.com
+        </a>
+        <a class="btn btn-outline" href="https://www.instagram.com/pencilhead021" target="_blank" rel="noopener">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+          Instagram
+        </a>
+        <a class="btn btn-outline" href="https://www.linkedin.com/in/mdmahathir021/" target="_blank" rel="noopener">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Mahathir Mohammad &middot; Bangladesh &middot; <a href="mailto:mdmahathir021@gmail.com" style="color: inherit;">mdmahathir021@gmail.com</a></p>
+</footer>
+
+</body>
+</html>
