@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects · Mahathir Mohammad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.skills-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:10px; }
+.skill-item { background:var(--paper); border:1px solid var(--border); border-radius:12px; padding:1.1rem 1.35rem; transition:border-color .2s; }
+.skill-item:hover { border-color:var(--accent-light); }
+.skill-name { font-size:14px; font-weight:500; color:var(--ink); margin-bottom:.25rem; }
+.skill-desc { font-size:12.5px; color:var(--ink-muted); line-height:1.55; margin-bottom:.6rem; }
+.skill-tools { font-size:11.5px; color:var(--ink-faint); }
+.skill-tools span { display:inline-block; background:var(--accent-faintest); color:var(--accent-mid); border-radius:6px; padding:2px 8px; margin:2px 3px 2px 0; font-size:11px; }
+.skill-learning { border-left:2px solid var(--accent-light); }
+.skill-learning-label { font-size:11px; color:var(--accent-mid); font-weight:500; margin-bottom:.25rem; }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-name" href="index.html">Mahathir Mohammad</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="beyond.html">Beyond</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<main>
+
+<section class="fade-in">
+  <p class="page-title">Projects</p>
+  <p class="page-sub">Engineering work outside the thesis — competition, tools built, and things that got used.</p>
+
+  <div class="card">
+    <div class="rank-row">
+      <span class="rank-badge">17th globally — technical report</span>
+      <span class="rank-badge">18th globally — proposal</span>
+      <span class="rank-badge">58th overall · 175 teams</span>
+    </div>
+    <div class="card-title">AIAA Design/Build/Fly 2025–26</div>
+    <div class="card-meta">Design Subteam Lead · TEAM MIST · Wichita, Kansas, USA</div>
+    <div class="card-body">
+      <p>DBF is the world's largest collegiate RC aircraft competition. I led the design subteam — aerodynamic analysis in XFLR5, wing and tail sizing, aerostructural trade studies balancing performance against structural weight and stiffness constraints.</p>
+      <p>The thing I'm most proud of is a parametric sizing script I built early in the process. Every design parameter — span, aspect ratio, tail volume coefficients, weight budgets — was wired together so that changing one propagated through everything automatically. The team stopped redoing calculations by hand. It just worked, and people relied on it.</p>
+      <p>The 17th and 18th global ranks in the technical report and proposal came from writing I led as primary author. For a team from Bangladesh competing internationally against 175 teams, those ranks mean something.</p>
+    </div>
+    <div class="tags">
+      <span class="tag tag-purple">XFLR5</span>
+      <span class="tag tag-coral">Conceptual aircraft design</span>
+      <span class="tag tag-coral">Technical writing</span>
+      <span class="tag tag-coral">Aerostructural trade studies</span>
+      <span class="tag tag-coral">Parametric sizing</span>
+    </div>
+  </div>
+</section>
+
+<section class="fade-in">
+  <div class="section-header"><span class="section-label">Skills &amp; Capabilities</span><div class="section-line"></div></div>
+  <div class="skills-grid">
+
+    <div class="skill-item">
+      <div class="skill-name">Numerical solver implementation</div>
+      <div class="skill-desc">Building discretisation schemes from scratch — stencil design, boundary condition encoding, convergence and stability analysis. Done at research level in the thesis.</div>
+      <div class="skill-tools">Tools used: <span>MATLAB</span></div>
+    </div>
+
+    <div class="skill-item">
+      <div class="skill-name">PDE derivation &amp; formulation</div>
+      <div class="skill-desc">Deriving governing equations from first principles — constitutive relations, equilibrium, compatibility, coupling terms. Not applying pre-built models.</div>
+    </div>
+
+    <div class="skill-item">
+      <div class="skill-name">Multiphysics modelling</div>
+      <div class="skill-desc">Setting up and solving coupled field problems where thermal and mechanical effects interact — tensor formulation, coordinate transforms, CTE coupling.</div>
+    </div>
+
+    <div class="skill-item">
+      <div class="skill-name">FEA cross-validation</div>
+      <div class="skill-desc">Using commercial FEA to verify custom solver results — setting up equivalent problems, interpreting discrepancies, iterating on both.</div>
+      <div class="skill-tools">Tools used: <span>ANSYS Mechanical</span></div>
+    </div>
+
+    <div class="skill-item">
+      <div class="skill-name">Aerodynamic analysis &amp; sizing</div>
+      <div class="skill-desc">Parametric aircraft sizing, wing and tail design, aerostructural trade studies — done at competition level for DBF.</div>
+      <div class="skill-tools">Tools used: <span>XFLR5</span></div>
+    </div>
+
+    <div class="skill-item">
+      <div class="skill-name">Technical writing</div>
+      <div class="skill-desc">Primary author of competition proposal and technical report that ranked 18th and 17th globally. LaTeX for academic documents.</div>
+      <div class="skill-tools">Tools used: <span>LaTeX</span></div>
+    </div>
+
+    <div class="skill-item skill-learning">
+      <div class="skill-learning-label">In progress</div>
+      <div class="skill-name">Scientific Python</div>
+      <div class="skill-desc">NumPy, SciPy, Matplotlib — learning actively for numerical work and visualisation.</div>
+    </div>
+
+    <div class="skill-item skill-learning">
+      <div class="skill-learning-label">In progress</div>
+      <div class="skill-name">FEM implementation</div>
+      <div class="skill-desc">Building a 1D/2D finite element solver from scratch — the same approach I took with FDM.</div>
+    </div>
+
+    <div class="skill-item skill-learning">
+      <div class="skill-learning-label">In progress</div>
+      <div class="skill-name">Abaqus</div>
+      <div class="skill-desc">Tutorial-level work on composite laminate modelling — getting familiar with the tool before using it seriously.</div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+<footer><p>Mahathir Mohammad · Bangladesh · <a href="mailto:mdmahathir021@gmail.com">mdmahathir021@gmail.com</a></p></footer>
+</body>
+</html>

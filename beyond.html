@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beyond Work · Mahathir Mohammad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.gallery-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+.gallery-item { aspect-ratio:3/4; border-radius:14px; overflow:hidden; background:var(--accent-lighter); border:1px solid var(--border); transition:transform .2s,box-shadow .2s; cursor:pointer; }
+.gallery-item:hover { transform:translateY(-3px); box-shadow:0 8px 24px rgba(107,79,53,.12); }
+.gallery-item img { width:100%; height:100%; object-fit:cover; display:block; }
+.gallery-placeholder { width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; padding:1rem; text-align:center; }
+.gallery-placeholder svg { color:var(--accent-light); }
+.gallery-placeholder span { font-size:11px; color:var(--ink-faint); line-height:1.4; }
+.gallery-note { font-size:13px; color:var(--ink-muted); margin-top:1rem; }
+.gallery-note a { color:var(--accent); text-decoration:none; }
+.gallery-note a:hover { text-decoration:underline; }
+.hobby-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--border); border-radius:18px; overflow:hidden; border:1px solid var(--border); }
+.hobby-cell { background:var(--paper); padding:1.6rem 1.75rem; transition:background .2s; }
+.hobby-cell:hover { background:var(--accent-faintest); }
+.hobby-icon { width:34px; height:34px; border-radius:9px; background:var(--accent-lighter); display:flex; align-items:center; justify-content:center; margin-bottom:.9rem; color:var(--accent); }
+.hobby-name { font-family:'Playfair Display',serif; font-size:15px; font-weight:500; color:var(--ink); margin-bottom:.4rem; }
+.hobby-desc { font-size:13px; color:var(--ink-muted); line-height:1.65; }
+.hobby-desc a { color:var(--accent); text-decoration:none; }
+.hobby-desc a:hover { text-decoration:underline; }
+.blog-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:12px; }
+.blog-card { background:var(--paper); border:1px solid var(--border); border-radius:16px; overflow:hidden; transition:border-color .2s,box-shadow .2s; }
+.blog-card:hover { border-color:var(--accent-light); box-shadow:0 4px 20px rgba(107,79,53,.07); }
+.blog-img { width:100%; aspect-ratio:16/9; background:var(--accent-lighter); display:flex; align-items:center; justify-content:center; overflow:hidden; }
+.blog-img img { width:100%; height:100%; object-fit:cover; }
+.blog-img-ph { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px; height:100%; }
+.blog-img-ph svg { color:var(--accent-light); }
+.blog-img-ph span { font-size:11px; color:var(--ink-faint); }
+.blog-body { padding:1.25rem 1.5rem; }
+.blog-tag { font-size:11px; font-weight:500; letter-spacing:.08em; text-transform:uppercase; color:var(--accent-mid); margin-bottom:.5rem; }
+.blog-title { font-family:'Playfair Display',serif; font-size:15px; font-weight:500; color:var(--ink); margin-bottom:.4rem; line-height:1.35; }
+.blog-excerpt { font-size:13px; color:var(--ink-muted); line-height:1.6; }
+.blog-coming { font-size:12px; color:var(--ink-faint); margin-top:1rem; font-style:italic; }
+@media(max-width:640px){
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .hobby-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-name" href="index.html">Mahathir Mohammad</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="beyond.html" class="active">Beyond</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<main>
+
+<section class="fade-in">
+  <p class="page-title">Beyond work</p>
+  <p class="page-sub">Engineering is what I do. This is the rest of it.</p>
+
+  <p style="font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-mid);margin-bottom:1rem;">Pencil sketches</p>
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="sketch1.jpeg" alt="Pencil sketch 1"
+        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'><svg width=\'26\' height=\'26\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.4\'><path d=\'M12 19l7-7 3 3-7 7-3-3z\'/><path d=\'M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z\'/></svg><span>sketch1.jpeg</span></div>'">
+    </div>
+    <div class="gallery-item">
+      <img src="sketch2.jpeg" alt="Pencil sketch 2"
+        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'><svg width=\'26\' height=\'26\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.4\'><path d=\'M12 19l7-7 3 3-7 7-3-3z\'/><path d=\'M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z\'/></svg><span>sketch2.jpeg</span></div>'">
+    </div>
+    <div class="gallery-item">
+      <img src="sketch3.jpeg" alt="Pencil sketch 3"
+        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'><svg width=\'26\' height=\'26\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.4\'><path d=\'M12 19l7-7 3 3-7 7-3-3z\'/><path d=\'M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z\'/></svg><span>sketch3.jpeg</span></div>'">
+    </div>
+    <div class="gallery-item">
+      <img src="sketch4.jpeg" alt="Pencil sketch 4"
+        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'><svg width=\'26\' height=\'26\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.4\'><path d=\'M12 19l7-7 3 3-7 7-3-3z\'/><path d=\'M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z\'/></svg><span>sketch4.jpeg</span></div>'">
+    </div>
+  </div>
+  <p class="gallery-note">2B pencil only — no colour, no formal training. More on my <a href="https://www.instagram.com/pencilhead021" target="_blank" rel="noopener">Instagram art page</a>.</p>
+</section>
+
+<section class="fade-in">
+  <div class="section-header"><span class="section-label">Interests</span><div class="section-line"></div></div>
+  <div class="hobby-grid">
+    <div class="hobby-cell">
+      <div class="hobby-icon">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><circle cx="11" cy="11" r="2"/></svg>
+      </div>
+      <div class="hobby-name">Pencil sketching</div>
+      <div class="hobby-desc">It started in school — the wrongness of my drawings bothered me enough to keep going. No colour means everything depends on shadow and texture, which is exactly the part I find hardest and most satisfying. Portraits mostly, sometimes shiny objects where the light does interesting things.</div>
+    </div>
+    <div class="hobby-cell">
+      <div class="hobby-icon">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h.01M15 9h.01M9 15h.01M15 15h.01M12 12h.01"/></svg>
+      </div>
+      <div class="hobby-name">Sudoku</div>
+      <div class="hobby-desc">Hard difficulty, under 8 minutes. Meditative in a way that is difficult to explain to people who haven't tried it — completely self-contained, no ambiguity, just logic applied patiently until the grid closes.</div>
+    </div>
+    <div class="hobby-cell">
+      <div class="hobby-icon">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+      </div>
+      <div class="hobby-name">Rubik's cube</div>
+      <div class="hobby-desc">Solved a 3×3 under 30 seconds in 8th grade. Then it broke, I forgot every algorithm, and confidently assumed I could pick it back up whenever. Currently relearning on a 2×2. It is going fine.</div>
+    </div>
+    <div class="hobby-cell">
+      <div class="hobby-icon">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+      </div>
+      <div class="hobby-name">Singing &amp; stage</div>
+      <div class="hobby-desc">Limited range, no formal training — but tolerable enough that people have invited me back. Performed on stage at university twice, informal events several more times. Also my primary stress coping mechanism, location non-negotiable.</div>
+    </div>
+    <div class="hobby-cell">
+      <div class="hobby-icon">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+      </div>
+      <div class="hobby-name">Anime</div>
+      <div class="hobby-desc">Two modes: One Piece, for politics, personal ambition, and a main character whose dream is so large it becomes magnetic — and romance anime, for the modern fairy tale with the guaranteed happy ending. I'm aware the second is delusional. That's rather the point.</div>
+    </div>
+    <div class="hobby-cell">
+      <div class="hobby-icon">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      </div>
+      <div class="hobby-name">Learning random things</div>
+      <div class="hobby-desc">No system. If something catches my attention, I follow it until I understand it well enough to stop feeling unsettled by not knowing. Topics vary wildly. The only common thread is that something about it felt worth the weekend.</div>
+    </div>
+  </div>
+</section>
+
+<section class="fade-in">
+  <div class="section-header"><span class="section-label">Writing &amp; Places</span><div class="section-line"></div></div>
+  <div class="blog-grid">
+    <div class="blog-card">
+      <div class="blog-img">
+        <img src="dbf-wichita.jpeg" alt="DBF Wichita"
+          onerror="this.parentElement.innerHTML='<div class=\'blog-img-ph\'><svg width=\'28\' height=\'28\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.2\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><path d=\'M21 15l-5-5L5 21\'/></svg><span>Add photo: dbf-wichita.jpeg</span></div>'">
+      </div>
+      <div class="blog-body">
+        <div class="blog-tag">Competition · Wichita, Kansas</div>
+        <div class="blog-title">What it actually feels like to compete at DBF</div>
+        <div class="blog-excerpt">A year of design work, one flight window, and a lot of things you only learn by being there. Notes from our trip to the 2025–26 AIAA Design/Build/Fly competition.</div>
+        <div class="blog-coming">Coming soon</div>
+      </div>
+    </div>
+    <div class="blog-card">
+      <div class="blog-img">
+        <div class="blog-img-ph">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span>Add photo: la.jpeg</span>
+        </div>
+      </div>
+      <div class="blog-body">
+        <div class="blog-tag">Travel · Los Angeles</div>
+        <div class="blog-title">First time in the US</div>
+        <div class="blog-excerpt">Observations from someone landing in LA for the first time — the scale, the contrast, and the particular feeling of a place you've only ever seen in films.</div>
+        <div class="blog-coming">Coming soon</div>
+      </div>
+    </div>
+    <div class="blog-card">
+      <div class="blog-img">
+        <div class="blog-img-ph">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span>Add photo: bangladesh.jpeg</span>
+        </div>
+      </div>
+      <div class="blog-body">
+        <div class="blog-tag">Bangladesh</div>
+        <div class="blog-title">Places worth going with good company</div>
+        <div class="blog-excerpt">A few spots across Bangladesh that are better experienced than described — and considerably better with friends than without.</div>
+        <div class="blog-coming">Coming soon</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer><p>Mahathir Mohammad · Bangladesh · <a href="mailto:mdmahathir021@gmail.com">mdmahathir021@gmail.com</a></p></footer>
+</body>
+</html>

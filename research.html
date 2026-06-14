@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research · Mahathir Mohammad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.interests-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:10px; }
+.interest-item { background:var(--paper); border:1px solid var(--border); border-radius:12px; padding:1rem 1.25rem; transition:border-color .2s,background .2s; }
+.interest-item:hover { border-color:var(--accent-light); background:var(--accent-faintest); }
+.interest-name { font-size:14px; font-weight:500; color:var(--ink); margin-bottom:.25rem; }
+.interest-desc { font-size:12.5px; color:var(--ink-muted); line-height:1.55; }
+.course-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:10px; }
+.course-item { background:var(--paper); border:1px solid var(--border); border-radius:12px; padding:1rem 1.25rem; transition:border-color .2s; }
+.course-item:hover { border-color:var(--accent-light); }
+.course-name { font-size:13.5px; font-weight:500; color:var(--ink); margin-bottom:.3rem; }
+.course-note { font-size:12.5px; color:var(--ink-muted); line-height:1.55; }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-name" href="index.html">Mahathir Mohammad</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html" class="active">Research</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="beyond.html">Beyond</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<main>
+
+<section class="fade-in">
+  <p class="page-title">Research</p>
+  <p class="page-sub">My work sits at the intersection of solid mechanics and numerical methods — deriving the physics from first principles, then building the solver to compute it.</p>
+
+  <div class="card">
+    <div class="card-title">Thermo-mechanical response of anisotropic MMC panels</div>
+    <div class="card-meta">Undergraduate thesis · MIST · 2025–2026 · Supervisor: Prof. Dr. Shaikh Reaz Ahmed, BUET</div>
+    <div class="card-body">
+      <p>My thesis started as an assigned topic and turned into a genuine rabbit hole. Anisotropic metal matrix composites conduct heat and carry mechanical load differently along different material directions — and those two effects don't stay separate. They couple. Capturing that coupling correctly, from first principles, turns out to be surprisingly involved.</p>
+      <p>I derived the governing PDE system — anisotropic Fourier conduction with full off-diagonal conductivity tensor, plane-stress equilibrium, compatibility equations, and thermoelastic coupling through CTE mismatch — then reduced it to a single fourth-order PDE through a displacement function formulation I developed independently. The solver runs on a 21-point stencil for the biharmonic-type equation, with directional stencils for third-order stress boundary conditions.</p>
+      <p>Currently in final cross-validation against analytical benchmarks and ANSYS Mechanical. Thesis defence: 10 June 2026. Journal submission planned as first post-graduation priority — target journals: <em>Composite Structures</em>, <em>Computers &amp; Structures</em>.</p>
+    </div>
+    <div class="tags">
+      <span class="tag tag-teal">Computational solid mechanics</span>
+      <span class="tag tag-teal">Finite difference methods</span>
+      <span class="tag tag-teal">Anisotropic composites</span>
+      <span class="tag tag-teal">Thermoelastic coupling</span>
+      
+      <span class="tag tag-blue">ANSYS Mechanical (cross-validation)</span>
+    </div>
+  </div>
+</section>
+
+<section class="fade-in">
+  <div class="section-header"><span class="section-label">Research Interests</span><div class="section-line"></div></div>
+  <div class="interests-grid">
+    <div class="interest-item">
+      <div class="interest-name">Finite element methods</div>
+      <div class="interest-desc">The natural next step from FDM — I want to implement a solver from scratch for proper conceptual grounding before using commercial tools.</div>
+    </div>
+    <div class="interest-item">
+      <div class="interest-name">Multiphysics simulation</div>
+      <div class="interest-desc">Coupled PDE systems where thermal, mechanical, and possibly fluid effects interact — the area my thesis sits in, and where I want to go deeper.</div>
+    </div>
+    <div class="interest-item">
+      <div class="interest-name">Composite &amp; heterogeneous materials</div>
+      <div class="interest-desc">MMCs, CMCs, and their anisotropic behaviour. Interested in homogenisation approaches for bridging micro and macro scales.</div>
+    </div>
+    <div class="interest-item">
+      <div class="interest-name">Fracture &amp; damage mechanics</div>
+      <div class="interest-desc">How cracks initiate and propagate in anisotropic materials — a natural extension of structural analysis into the nonlinear regime.</div>
+    </div>
+    <div class="interest-item">
+      <div class="interest-name">High-speed structural applications</div>
+      <div class="interest-desc">Thermal stress and ablation in hypersonic structures — where the physics gets extreme and the modelling assumptions get interesting.</div>
+    </div>
+    <div class="interest-item">
+      <div class="interest-name">Data-driven constitutive modelling</div>
+      <div class="interest-desc">Using ML to learn material behaviour where classical models struggle — a direction I'm curious about but haven't yet explored formally.</div>
+    </div>
+  </div>
+</section>
+
+<section class="fade-in">
+  <div class="section-header"><span class="section-label">Selected Coursework</span><div class="section-line"></div></div>
+  <div class="course-grid">
+    <div class="course-item">
+      <div class="course-name">Solid Mechanics</div>
+      <div class="course-note">Stress-strain relations, Mohr's circle, beam deflection, failure theories. The point where forces stop being abstract and start having consequences for material.</div>
+    </div>
+    <div class="course-item">
+      <div class="course-name">Mechanics of Structures, Vibration &amp; Aeroelasticity</div>
+      <div class="course-note">Theory of elasticity in 2D, energy methods, thin plate theory — and how structures interact with the airflow trying to deform them.</div>
+    </div>
+    <div class="course-item">
+      <div class="course-name">Heat Transfer</div>
+      <div class="course-note">Conduction, convection, radiation, heat exchangers. Directly feeds into the thesis — understanding heat flow before modelling it numerically.</div>
+    </div>
+    <div class="course-item">
+      <div class="course-name">Computational Fluid Dynamics</div>
+      <div class="course-note">PDE classification, finite difference discretisation, stability analysis, pressure-velocity coupling. Where numerical methods stopped being theoretical and became something you implement.</div>
+    </div>
+    <div class="course-item">
+      <div class="course-name">High-Speed Aerodynamics</div>
+      <div class="course-note">Compressible flow, normal and oblique shocks, Prandtl-Meyer expansion, supersonic airfoils. The physics gets genuinely strange above Mach 1.</div>
+    </div>
+    <div class="course-item">
+      <div class="course-name">Numerical Analysis</div>
+      <div class="course-note">Root-finding, linear systems, ODEs, error analysis — implemented in MATLAB. The course that made the FDM solver in my thesis feel buildable.</div>
+    </div>
+    <div class="course-item">
+      <div class="course-name">Aerospace Vehicle Design</div>
+      <div class="course-note">Conceptual to preliminary design: weight estimation, wing sizing, tail sizing, configuration layout. Everything the DBF script was trying to automate.</div>
+    </div>
+    <div class="course-item">
+      <div class="course-name">Applied Aerodynamics</div>
+      <div class="course-note">Lifting line theory, boundary layers, Navier-Stokes derivation. Foundation for the XFLR5 work in DBF and for understanding what CFD is actually solving.</div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer><p>Mahathir Mohammad · Bangladesh · <a href="mailto:mdmahathir021@gmail.com">mdmahathir021@gmail.com</a></p></footer>
+</body>
+</html>
